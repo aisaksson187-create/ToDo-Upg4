@@ -4,7 +4,7 @@
 const completedElement = document.querySelector("#completedElement");
 const inputTodo = document.querySelector("#inputTodo");
 const addTodoBtn = document.querySelector("#AddTodoBtn");
-const infoTextElement = document.querySelector("#small");
+const infoTextElement = document.querySelector("small");
 const todoList = document.querySelector("#todoList");
 let todoText = "";
 let completed = 0;
@@ -30,15 +30,25 @@ function addTodo() {
 
     // add eventlistener to span with text
     itemText.addEventListener("click",
-        function(){
-            if(itemText.classList.contains("completed"))
-            itemText.setAttribute('class', "");
-            else
-            itemText.setAttribute("class", "completed");
+        function () {
+            if (itemText.classList.contains("completed")) {
+                itemText.setAttribute('class', "");
+                completed--;
+                completedElement.textContent = "Du har " + completed + " som är klara."
+
+            }
+
+            else {
+                itemText.setAttribute("class", "completed");
+                completed++;
+                completedElement.textContent = "Du har " + completed + " som är klara."
+
+            }
+
         }
     )
-
-item.appendChild(itemText);
+    completedElement.textContent = "Du har " + completed + " som är klara."
+    item.appendChild(itemText);
 
 
 }
