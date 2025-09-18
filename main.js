@@ -1,0 +1,44 @@
+// Javascript for todo-list
+
+
+const completedElement = document.querySelector("#completedElement");
+const inputTodo = document.querySelector("#inputTodo");
+const addTodoBtn = document.querySelector("#AddTodoBtn");
+const infoTextElement = document.querySelector("#small");
+const todoList = document.querySelector("#todoList");
+let todoText = "";
+let completed = 0;
+
+
+addTodoBtn.addEventListener("click", addTodo);
+
+function addTodo() {
+    // Things that will happen when clicking button
+    infoTextElement.textContent = "";
+    todoText = inputTodo.value;
+    if (todoText.length == 0) {
+        infoTextElement.textContent = "Du måste skriva något!";
+        return;
+
+    }
+
+    const item = document.createElement('li');
+    todoList.appendChild(item);
+
+    const itemText = document.createElement('span');
+    itemText.innerText = todoText;
+
+    // add eventlistener to span with text
+    itemText.addEventListener("click",
+        function(){
+            if(itemText.classList.contains("completed"))
+            itemText.setAttribute('class', "");
+            else
+            itemText.setAttribute("class", "completed");
+        }
+    )
+
+item.appendChild(itemText);
+
+
+}
