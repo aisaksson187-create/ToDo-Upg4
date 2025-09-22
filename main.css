@@ -10,7 +10,7 @@ h4 {
 
 .completed {
     text-decoration: line-through;
-    color: rgb(110, 105, 105);
+    color: rgb(190, 0, 0);
 
 }
 
@@ -31,6 +31,7 @@ p {
 }
 
 span {
+    cursor: pointer;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 20px;
@@ -39,13 +40,20 @@ span {
 }
 
 .trashcan {
-
+cursor: pointer;
 font-size: xx-large;
 margin-left: 10px;
 text-shadow: 3px 3px #000000;
 color: rgb(9, 161, 17)
 
 
-/* mouseover? */
+
 
 }
+
+
+#AddTodoBtn {
+    cursor: pointer;
+
+}
+
