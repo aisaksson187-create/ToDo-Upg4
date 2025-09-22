@@ -1,11 +1,51 @@
 /* Your styling here */
 
-h1 {
-    color: blue;
+h4 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px #000000;
+    padding: 8px;
 }
 
 .completed {
     text-decoration: line-through;
-    color: rgb(155, 168, 224);
+    color: rgb(110, 105, 105);
+
+}
+
+label {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 2px 2px #000000;
+
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 2px 2px #000000;
+
+}
+
+span {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px #000000;
+
+}
+
+.trashcan {
+
+font-size: xx-large;
+margin-left: 10px;
+text-shadow: 3px 3px #000000;
+color: rgb(9, 161, 17)
+
+
+/* mouseover? */
 
 }
