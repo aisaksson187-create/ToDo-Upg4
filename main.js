@@ -11,17 +11,21 @@ const allTheTodos = [];
 const todos = [];
 const todo = {};
 
-addTodoBtn.addEventListener("click", addTodo);
+addTodoBtn.addEventListener("click", function() {
+    addTodo();
+    clearInputField();
+});
 
 function changeStatus(todoText, completedStatus){
 
     let findIndex = allTheTodos.map(t => t.name).indexOf(todoText);
     allTheTodos[findIndex].completed = completedStatus;
 
-
 }
 
-
+function clearInputField() {
+    document.getElementById('inputTodo').value="";
+       }
 
 function addTodo() {
     // Things that will happen when clicking button
@@ -64,6 +68,8 @@ function addTodo() {
 
         }
     )
+
+    
     completedElement.textContent = "Du har " + completed + " som är klara."
     item.appendChild(itemText);
 
@@ -82,24 +88,8 @@ function addTodo() {
     }
     )
 
-
-    // add to Array
-    const todo = {name: text, status: false}
     todos.push(todo);
     console.log(todos);
-
-    // methods for array
-    const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
-    let index = fruits.indexOf("Apple");
-
-    const numbers = [4, 9, 16, 25];
-    const newArr = numbers.map(Math.sqrt)
-
-    let removeText = item.firstChild.firstChild.textContent
-    let indexToRemove = todos.map(t => t.name).indexOf(removeText);
-    todos.splice(indexToRemove, 1);
-
     
-
-
 }
+
